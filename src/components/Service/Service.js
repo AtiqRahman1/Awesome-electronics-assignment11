@@ -5,9 +5,9 @@ import { faGlobe, faShippingFast, faWallet } from '@fortawesome/free-solid-svg-i
 
 const Service = () => {
     return (
-        <div className='mt-10'>
+        <div>
             <CardGroup>
-                <Card border="gray" style={{ width: '18rem' }}>
+                <Card border="gray" style={{ width: '18rem', backgroundColor: 'lightgray' }}>
                     <Card.Body>
                         <Card.Title>
                             <FontAwesomeIcon icon={faGlobe} />
@@ -17,7 +17,7 @@ const Service = () => {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card border="gray" style={{ width: '18rem' }}>
+                <Card border="gray" style={{ width: '18rem', backgroundColor: 'lightgray' }}>
                     <Card.Body>
                         <Card.Title>
                             <FontAwesomeIcon icon={faShippingFast} />
@@ -27,7 +27,7 @@ const Service = () => {
                         </Card.Text>
                     </Card.Body>
                 </Card>
-                <Card border="gray" style={{ width: '18rem' }}>
+                <Card border="gray" style={{ width: '18rem', backgroundColor: 'lightgray' }}>
                     <Card.Body>
                         <Card.Title>
                             <FontAwesomeIcon icon={faWallet} />

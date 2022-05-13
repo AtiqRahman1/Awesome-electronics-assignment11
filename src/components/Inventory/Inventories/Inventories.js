@@ -13,7 +13,7 @@ const Inventories = () => {
 
     return (
         <div>
-            <h2>Our Inventories{inventories.length}</h2>
+            <h1>Our Inventories</h1>
             <div className="inventories-container">
                 {
                     inventories.map(inventory => <Inventory

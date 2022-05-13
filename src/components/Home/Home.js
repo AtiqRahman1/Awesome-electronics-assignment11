@@ -1,7 +1,7 @@
 import React from 'react';
 import AboutUs from '../AboutUs/AboutUs';
 import Banner from '../Banner/Banner';
-import Inventories from '../Inventory/Inventories/Inventories';
+import Inventories from '../Inventories/Inventories';
 
 import Service from '../Service/Service';
 

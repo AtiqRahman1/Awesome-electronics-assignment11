@@ -3,6 +3,8 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
+import GoogleLogin from '../Login/GoogleLogin/GoogleLogin';
 
 const Register = () => {
     const [email, setRegisterEmail] = useState("");
@@ -12,9 +14,13 @@ const Register = () => {
 
     const navigate = useNavigate()
 
-    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
+    const [createUserWithEmailAndPassword, user, loading] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
 
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth)
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+    if (loading || updating) {
+        return <Loading></Loading>
+    }
 
     const handleName = (e) => {
         setName(e.target.value)
@@ -46,24 +52,24 @@ const Register = () => {
             <h2 className='text-center'>Please Register</h2>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control onBlur={handleName} type="text" placeholder="Your Name" required />
+                    <Form.Label>Your Name</Form.Label>
+                    <Form.Control onBlur={handleName} type="text" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control onBlur={handleRegisterEmail} type="email" placeholder="Enter email" required />
+                    <Form.Control onBlur={handleRegisterEmail} type="email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control onBlur={handleRegisterPassword} type="password" placeholder="Password" required />
+                    <Form.Control onBlur={handleRegisterPassword} type="password" required />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant="secondary" type="submit">
                     Register
                 </Button>
             </Form>
             <p className='text-center'>Already have an account? <Link to='/login' className='text-primary pe-auto text-decoration-none' >Please Login</Link></p>
-
+            <GoogleLogin></GoogleLogin>
         </div>
     );
 };

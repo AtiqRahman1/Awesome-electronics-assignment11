@@ -5,24 +5,24 @@ import auth from '../../../firebase.init';
 import google from '../../../images/google.png';
 
 const GoogleLogin = () => {
-    const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     let errorElement;
-    if (user) {
-        navigate('/home');
-    }
 
     if (error) {
-        errorElement = <div>
-            <p className='text-danger'>Error: {error.message}</p>
-        </div>
-    }
+        errorElement = <p className='text-danger'>Error: {error.message}</p>
+    };
+
+    if (user) {
+        navigate('/home');
+    };
+
     return (
         <div>
             <h2 className='text-center'>or</h2>
             {errorElement}
             <div className='d-grid gap-2 col-6 mx-auto'>
-                <button onClick={() => signInWithGoogle()} className='btn btn-primary'>
+                <button onClick={() => signInWithGoogle()} className='btn btn-secondary'>
                     <img src={google} alt="" />
                     <span className='px-2'>Google Sign In</span></button>
             </div>

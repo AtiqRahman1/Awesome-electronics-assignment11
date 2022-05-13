@@ -1,24 +1,45 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Register = () => {
-    const nameRef = useRef('');
-    const emailRegisterRef = useRef('');
-    const passwordRegisterRef = useRef('')
+    const [email, setRegisterEmail] = useState("");
+    const [password, setRegisterPassword] = useState("");
+    const [error, setError] = useState("");
+    const [name, setName] = useState("")
 
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
-    const navigateLogin = () => {
-        navigate('/login');
+    const [createUserWithEmailAndPassword, user] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true })
+
+    const [updateProfile, updating, updateError] = useUpdateProfile(auth)
+
+    const handleName = (e) => {
+        setName(e.target.value)
     }
 
-    const handleRegister = e => {
+    const handleRegisterEmail = (e) => {
+        setRegisterEmail(e.target.value)
+    }
+
+    const handleRegisterPassword = (e) => {
+        setRegisterPassword(e.target.value)
+
+    }
+
+    const handleRegister = async (e) => {
         e.preventDefault();
-        const name = nameRef.current.value;
-        const email = emailRegisterRef.current.value;
-        const password = passwordRegisterRef.current.value;
-        console.log(name, email, password)
+        if (password.length < 6) {
+            setError('password must be 6 characters or longer')
+            return;
+        }
+
+        await createUserWithEmailAndPassword(email, password)
+        await updateProfile({ displayName: name })
+        navigate('/home')
+
     }
     return (
         <div className='container w-50 mx-auto'>
@@ -26,22 +47,22 @@ const Register = () => {
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control ref={nameRef} type="text" placeholder="Your Name" required />
+                    <Form.Control onBlur={handleName} type="text" placeholder="Your Name" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRegisterRef} type="email" placeholder="Enter email" required />
+                    <Form.Control onBlur={handleRegisterEmail} type="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRegisterRef} type="password" placeholder="Password" required />
+                    <Form.Control onBlur={handleRegisterPassword} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                     Register
                 </Button>
             </Form>
-            <p className='text-center'>Already have an account? <Link to='/login' className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please login</Link></p>
+            <p className='text-center'>Already have an account? <Link to='/login' className='text-primary pe-auto text-decoration-none' >Please Login</Link></p>
 
         </div>
     );

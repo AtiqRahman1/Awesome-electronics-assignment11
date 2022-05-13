@@ -20,7 +20,7 @@ const Inventory = ({ inventory }) => {
                 <Card.Text>
                     {description}
                 </Card.Text>
-                <Link to='/checkout'>
+                <Link to='/inventory/:id'>
                     <Button variant="dark">Update</Button>
                 </Link>
 

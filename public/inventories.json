@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Refrigerator",
+        "price": "200",
+        "img": "https://i.ibb.co/6yqN69p/refrigerator.png",
+        "description": "",
+        "quantity": "20",
+        "supplier": "Tom hunt"
+    },
+    {
+        "id": 2,
+        "name": "Air Condition",
+        "price": "500",
+        "img": "https://i.ibb.co/BKNfvgf/air-conditon.png",
+        "description": "",
+        "quantity": "12",
+        "supplier": "Jemmy"
+    },
+    {
+        "id": 3,
+        "name": "Smart TV",
+        "price": "150",
+        "img": "https://i.ibb.co/M6NpF2W/television.png",
+        "description": "",
+        "quantity": "30",
+        "supplier": "Rocky"
+    },
+    {
+        "id": 4,
+        "name": "Laptop",
+        "price": "100",
+        "img": "https://i.ibb.co/jhgyGvV/laptop.png",
+        "description": "",
+        "quantity": "25",
+        "supplier": "Martine"
+    },
+    {
+        "id": 5,
+        "name": "SmartPhone",
+        "price": "250",
+        "img": "https://i.ibb.co/vQdQBQV/phone.png",
+        "description": "",
+        "quantity": "35",
+        "supplier": "Cruise"
+    },
+    {
+        "id": 6,
+        "name": "Speaker",
+        "price": "100",
+        "img": "https://i.ibb.co/5hgJr22/speaker.png",
+        "description": "",
+        "quantity": "23",
+        "supplier": "Akilies"
+    },
+    {
+        "id": 7,
+        "name": "Microwave",
+        "price": "120",
+        "img": "https://i.ibb.co/Bywjnwk/microwave.png",
+        "description": "",
+        "quantity": "16",
+        "supplier": "Tom hence"
+    },
+    {
+        "id": 8,
+        "name": "Washing Machine",
+        "price": "300",
+        "img": "https://i.ibb.co/Lpdgzf9/Washing-Machine.png",
+        "description": "",
+        "quantity": "28",
+        "supplier": "Devid"
+    },
+    {
+        "id": 9,
+        "name": "DSLR Camera",
+        "price": "400",
+        "img": "https://i.ibb.co/pLCCqKF/camera.png",
+        "description": "",
+        "quantity": "10",
+        "supplier": "Jack"
+    },
+    {
+        "id": 10,
+        "name": "Blender",
+        "price": "110",
+        "img": "https://i.ibb.co/9wVn4rL/blender.png",
+        "description": "",
+        "quantity": "30",
+        "supplier": "Backhum"
+    }
+]

@@ -1,10 +1,31 @@
 import React from 'react';
+import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const Inventory = () => {
+
+const Inventory = ({ inventory }) => {
+    const { name, img, price, description, quantity, supplier } = inventory;
     return (
-        <div>
-            <h2>Inventory items</h2>
-        </div>
+        <Card className='my-2' style={{ width: '18rem', background: 'light' }}>
+            <Card.Img variant="top" src={img} />
+            <Card.Body>
+                <Card.Title>{name}</Card.Title>
+                <Card.Text>Price:${price}</Card.Text>
+                <Card.Text>
+                    Quantity:{quantity}
+                </Card.Text>
+                <Card.Text>
+                    Supplier Name:{supplier}
+                </Card.Text>
+                <Card.Text>
+                    {description}
+                </Card.Text>
+                <Link to='/checkout'>
+                    <Button variant="dark">Update</Button>
+                </Link>
+
+            </Card.Body>
+        </Card>
     );
 };
 

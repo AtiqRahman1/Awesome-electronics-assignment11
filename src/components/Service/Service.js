@@ -11,7 +11,7 @@ const Service = () => {
                     <Card.Body>
                         <Card.Title>
                             <FontAwesomeIcon icon={faGlobe} />
-                            WORLDWIDE DELIVERY</Card.Title>
+                            <span className='mx-2'>WORLDWIDE DELIVERY</span> </Card.Title>
                         <Card.Text>
                             We work with the biggest delivery networks. It doesn't matter where in the world you are.
                         </Card.Text>
@@ -21,7 +21,7 @@ const Service = () => {
                     <Card.Body>
                         <Card.Title>
                             <FontAwesomeIcon icon={faShippingFast} />
-                            FREE SHIPPING</Card.Title>
+                            <span className='mx-2'>FREE SHIPPING</span> </Card.Title>
                         <Card.Text>
                             Stop wondering about shipping costs, what you see is what you pay.
                         </Card.Text>
@@ -31,7 +31,7 @@ const Service = () => {
                     <Card.Body>
                         <Card.Title>
                             <FontAwesomeIcon icon={faWallet} />
-                            MONEY BACK GUARANTEE</Card.Title>
+                            <span className='mx-2'>MONEY BACK GUARANTEE</span> </Card.Title>
                         <Card.Text>
                             Got a problem with the product? Don't worry, we have a 30 day money back guarantee.
                         </Card.Text>

@@ -42,7 +42,7 @@ const Register = () => {
                 </Button>
             </Form>
             <p className='text-center'>Already have an account? <Link to='/login' className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please login</Link></p>
-            {/* <p className='text-center'>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></p> */}
+
         </div>
     );
 };

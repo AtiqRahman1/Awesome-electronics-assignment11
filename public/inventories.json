@@ -4,61 +4,61 @@
         "name": "Refrigerator",
         "price": "200",
         "img": "https://i.ibb.co/6yqN69p/refrigerator.png",
-        "description": "",
+        "description": "Double-door fridges are suitable for a family. It offers more space than a single door fridge and due to the two separate doors, you can save energy as you have access to individual sections.",
         "quantity": "20",
-        "supplier": "Tom hunt"
+        "supplier": "Tom Holland"
     },
     {
         "id": 2,
-        "name": "Air Condition",
+        "name": "Air Conditioner",
         "price": "500",
         "img": "https://i.ibb.co/BKNfvgf/air-conditon.png",
-        "description": "",
+        "description": "The goal of an energy efficient air conditioner is to reduce energy usage and costs, benefiting your wallet, your comfort, and the environment. If you want a truly high quality unit, you should choose one from us.",
         "quantity": "12",
-        "supplier": "Jemmy"
+        "supplier": "Jemmy Json"
     },
     {
         "id": 3,
         "name": "Smart TV",
         "price": "150",
         "img": "https://i.ibb.co/M6NpF2W/television.png",
-        "description": "",
+        "description": "A smart TV is a digital television that is Internet-connected, storage-aware computer specialized for entertainment. Smart TVs are available as stand-alone products.",
         "quantity": "30",
-        "supplier": "Rocky"
+        "supplier": "Diego Rocky"
     },
     {
         "id": 4,
         "name": "Laptop",
         "price": "100",
         "img": "https://i.ibb.co/jhgyGvV/laptop.png",
-        "description": "",
+        "description": "Laptops give you the flexibility and freedom for work anytime, anywhere.For most, the freedom that laptops offer is a convenient luxury. No matter where you are, a laptop allows you to bring your work with you.",
         "quantity": "25",
-        "supplier": "Martine"
+        "supplier": "Martine Coinneach"
     },
     {
         "id": 5,
         "name": "SmartPhone",
         "price": "250",
         "img": "https://i.ibb.co/vQdQBQV/phone.png",
-        "description": "",
+        "description": "There are so many features such as Internet connectivity,A mobile browser,Embedded memory,A hardware or software-based QWERTY keyboard,Wireless synchronization with other devices.",
         "quantity": "35",
-        "supplier": "Cruise"
+        "supplier": "Dev Cruise"
     },
     {
         "id": 6,
         "name": "Speaker",
         "price": "100",
         "img": "https://i.ibb.co/5hgJr22/speaker.png",
-        "description": "",
+        "description": "There is a standard test that manufacturers run with their speakers to determine sensitivity, which involves placing a microphone connected to a decibel meter one meter in front of a speaker.",
         "quantity": "23",
-        "supplier": "Akilies"
+        "supplier": "Devin luis"
     },
     {
         "id": 7,
         "name": "Microwave",
         "price": "120",
         "img": "https://i.ibb.co/Bywjnwk/microwave.png",
-        "description": "",
+        "description": "A microwave oven has a top class cooking quality if it has 70% of the relevant specifications.The microwave ovens have an inverter motor and the microwaves spread via a rotating antenna or multiple inputs.",
         "quantity": "16",
         "supplier": "Tom hence"
     },
@@ -67,26 +67,26 @@
         "name": "Washing Machine",
         "price": "300",
         "img": "https://i.ibb.co/Lpdgzf9/Washing-Machine.png",
-        "description": "",
+        "description": "They get clothes clean by moving them through a pool of water so fabrics are well rinsed. Detergents,especially single-dose packs, are more likely to dissolve completely in them.",
         "quantity": "28",
-        "supplier": "Devid"
+        "supplier": "Devid Brayden"
     },
     {
         "id": 9,
         "name": "DSLR Camera",
         "price": "400",
         "img": "https://i.ibb.co/pLCCqKF/camera.png",
-        "description": "",
+        "description": "A digital single-lens reflex camera (DSLR) is a digital camera that combines the optics and the mechanisms of a single-lens reflex camera with a digital imaging sensor.",
         "quantity": "10",
-        "supplier": "Jack"
+        "supplier": "Jack Antonio"
     },
     {
         "id": 10,
         "name": "Blender",
         "price": "110",
         "img": "https://i.ibb.co/9wVn4rL/blender.png",
-        "description": "",
+        "description": "Blender is an electrical kitchen appliance used for mixing liquids and soft foods together or turning fruit or vegetables into liquid.",
         "quantity": "30",
-        "supplier": "Backhum"
+        "supplier": "Aaron Backhum"
     }
 ]

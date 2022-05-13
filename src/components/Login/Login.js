@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import GoogleLogin from './GoogleLogin/GoogleLogin';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -54,6 +55,7 @@ const Login = () => {
             </Form>
             <p className='text-center'>New here? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
             {/* <p className='text-center'>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></p> */}
+            <GoogleLogin></GoogleLogin>
         </div>
     );
 };

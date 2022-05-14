@@ -1,0 +1,6 @@
+.manage-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 15px;
+    margin-left: 50px;
+}

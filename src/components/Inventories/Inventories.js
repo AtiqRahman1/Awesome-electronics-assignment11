@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Inventory from '../Inventory/Inventory';
 import './Inventories.css';
 
@@ -6,7 +8,7 @@ const Inventories = () => {
     const [inventories, setInventories] = useState([]);
 
     useEffect(() => {
-        fetch('inventories.json')
+        fetch('http://localhost:5000/inventory')
             .then(res => res.json())
             .then(data => setInventories(data))
     }, []);
@@ -17,10 +19,15 @@ const Inventories = () => {
             <div className="inventories-container">
                 {
                     inventories.map(inventory => <Inventory
-                        key={inventory.id}
+                        key={inventory._id}
                         inventory={inventory}
                     ></Inventory>).slice(0, 6)
                 }
+            </div>
+            <div className='d-flex justify-content-center mb-2'>
+                <Link to='/manageInventory'>
+                    <Button variant="primary">Manage Inventories</Button>
+                </Link>
             </div>
         </div>
     );

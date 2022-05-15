@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Inventory = ({ inventory }) => {
     const { name, img, price, description, quantity, supplier } = inventory;
+
     return (
         <Card className='my-2' style={{ width: '18rem', background: 'light' }}>
             <Card.Img variant="top" src={img} />

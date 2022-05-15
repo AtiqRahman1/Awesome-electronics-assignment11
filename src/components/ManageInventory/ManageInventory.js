@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useInventories from '../hooks/useInventories';
 import './ManageInventory.css';
 
@@ -46,8 +47,14 @@ const ManageInventory = () => {
                     </Card>)
                 }
             </div>
+            <div className='d-flex justify-content-center mb-2'>
+                <Link to='/additem'>
+                    <Button variant="primary">Add New Item</Button>
+                </Link>
+            </div>
 
         </div>
+
     );
 };
 

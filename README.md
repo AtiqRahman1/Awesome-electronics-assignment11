@@ -1,6 +1,6 @@
 # Awesome Electronics
 
-Live website link ().
+Live website link (https://awesome-electronics-assignment11.netlify.app/).
 
 ## Short description
 
